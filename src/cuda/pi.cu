@@ -96,35 +96,29 @@ __global__ void Reduction(curandState_t* states, float *ptr)
 	tmp += 1;
   }
   // Append the value in memory
-  partialSum[tx] = tmp;
-
-  tmp = 0;
-  // Start generating the second N samples
-  for(int i = 0; i < ItersPerThread; i++)
-  {
-    x = curand_uniform(&states[sequence]);
-    y = curand_uniform(&states[sequence]);
-    if (x * x + y * y <= 1)
-      tmp += 1;
-  }
-  // Append the value in a strided memory location
-  partialSum[bx_dim + tx] = tmp;
-
-  // Perfrom reduction sum algorithm to sum all elements
-  // in the partialSum shared memory array.
+  partialSum[tx] += tmp;
 
   __syncthreads();
-  for (unsigned int stride = blockDim.x; stride > 0; stride = stride / 2.0f)
+  for (unsigned int stride = blockDim.x / 2; stride > WARP_SIZE; stride = stride / 2.0f)
   {
-    if (tx < stride)
-        partialSum[tx] += partialSum[tx + stride];
-	__syncthreads();
+      if (tx < stride)
+		partialSum[tx] += partialSum[tx + stride];
+      __syncthreads();
   }
 
+  // Reduction tree with shuffle instructions
+  float sum = 0;
+  if(tx < WARP_SIZE) 
+  {
+    sum = partialSum[tx] + partialSum[tx + WARP_SIZE];
+    for(unsigned int stride = WARP_SIZE/2; stride > 0; stride /= 2) 
+    {
+      sum += __shfl_down_sync(0xffffffff, sum, stride);
+    }
+  }
 
-  // The final sum will always be in the first location.
   if (tx == 0)
-    ptr[bx_index + by_index * gridDim.x] = partialSum[tx];
+    ptr[bx_index + by_index * gridDim.x] = sum;
 }
 
 __global__ void init(unsigned int seed, curandState_t* states)
