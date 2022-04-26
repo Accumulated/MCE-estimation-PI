@@ -16,6 +16,8 @@
 #include <cuda_runtime.h>
 #include <device_functions.h>
 
+#define WARP_SIZE 32
+
 
 /*******************************************************************************
  * This code implements Monte Carlo Simulation for estimating
