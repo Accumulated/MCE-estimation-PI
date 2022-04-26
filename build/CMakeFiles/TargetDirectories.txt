@@ -1,0 +1,4 @@
+C:/Users/Mohamed Mahmoud/Downloads/New folder/pi/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/Mohamed Mahmoud/Downloads/New folder/pi/build/CMakeFiles/ZERO_CHECK.dir
+C:/Users/Mohamed Mahmoud/Downloads/New folder/pi/build/src/cuda/CMakeFiles/pi_cuda.dir
+C:/Users/Mohamed Mahmoud/Downloads/New folder/pi/build/src/opencl/CMakeFiles/pi_opencl.dir
