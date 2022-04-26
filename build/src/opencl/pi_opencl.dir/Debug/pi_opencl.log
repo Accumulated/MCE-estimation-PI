@@ -1,0 +1,9 @@
+﻿  Building Custom Rule C:/Users/Mohamed Mahmoud/Downloads/New folder/pi/src/opencl/CMakeLists.txt
+  pi.cpp
+C:\Program Files\ArrayFire\v3\include\af/exception.h(22,1): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'af::exception'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\include\vcruntime_exception.h(48): message : see declaration of 'std::exception'
+C:\Program Files\ArrayFire\v3\include\af/exception.h(21): message : see declaration of 'af::exception'
+C:\Users\Mohamed Mahmoud\Downloads\New folder\pi\src\common\common.h(15,20): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  pi.cpp
+C:\Users\Mohamed Mahmoud\Downloads\New folder\pi\src\common\common.h(15,20): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  pi_opencl.vcxproj -> C:\Users\Mohamed Mahmoud\Downloads\New folder\pi\build\bin\Debug\pi_opencl.exe

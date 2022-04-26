@@ -1,0 +1,26 @@
+^C:\USERS\MOHAMED MAHMOUD\DOWNLOADS\NEW FOLDER\PI\SRC\CUDA\PI.CU
+setlocal
+cd "C:\Users\Mohamed Mahmoud\Downloads\New folder\pi\build\src\cuda\CMakeFiles\pi_cuda.dir"
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory "C:/Users/Mohamed Mahmoud/Downloads/New folder/pi/build/src/cuda/CMakeFiles/pi_cuda.dir//Debug"
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -D verbose:BOOL=OFF -D "CCBIN:PATH=C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools/MSVC/14.30.30705/bin/Hostx64/x64" -D build_configuration:STRING=Debug -D "generated_file:STRING=C:/Users/Mohamed Mahmoud/Downloads/New folder/pi/build/src/cuda/CMakeFiles/pi_cuda.dir//Debug/pi_cuda_generated_pi.cu.obj" -D "generated_cubin_file:STRING=C:/Users/Mohamed Mahmoud/Downloads/New folder/pi/build/src/cuda/CMakeFiles/pi_cuda.dir//Debug/pi_cuda_generated_pi.cu.obj.cubin.txt" -P "C:/Users/Mohamed Mahmoud/Downloads/New folder/pi/build/src/cuda/CMakeFiles/pi_cuda.dir//pi_cuda_generated_pi.cu.obj.Debug.cmake"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\MOHAMED MAHMOUD\DOWNLOADS\NEW FOLDER\PI\SRC\CUDA\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/Mohamed Mahmoud/Downloads/New folder/pi" "-BC:/Users/Mohamed Mahmoud/Downloads/New folder/pi/build" --check-stamp-file "C:/Users/Mohamed Mahmoud/Downloads/New folder/pi/build/src/cuda/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

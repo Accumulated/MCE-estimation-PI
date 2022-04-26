@@ -1,0 +1,10 @@
+^C:\USERS\MOHAMED MAHMOUD\DOWNLOADS\NEW FOLDER\PI\SRC\OPENCL\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/Mohamed Mahmoud/Downloads/New folder/pi" "-BC:/Users/Mohamed Mahmoud/Downloads/New folder/pi/build" --check-stamp-file "C:/Users/Mohamed Mahmoud/Downloads/New folder/pi/build/src/opencl/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

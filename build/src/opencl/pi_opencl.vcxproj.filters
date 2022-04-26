@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Mohamed Mahmoud\Downloads\New folder\pi\src\common\pi.cpp">
+      <Filter>opencl\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mohamed Mahmoud\Downloads\New folder\pi\src\opencl\pi.cpp">
+      <Filter>opencl\Sources</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\Mohamed Mahmoud\Downloads\New folder\pi\src\common\common.h">
+      <Filter>opencl\Headers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Mohamed Mahmoud\Downloads\New folder\pi\src\opencl\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="opencl">
+      <UniqueIdentifier>{1474A498-5FD4-3A50-A303-2F9542138646}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="opencl\Headers">
+      <UniqueIdentifier>{DCF3553C-2506-32A3-BCFC-22FFAD48007F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="opencl\Sources">
+      <UniqueIdentifier>{FBE2B046-E797-3795-A93D-134B111CF215}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,5 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-3.22/Modules/CMakePushCheckState.cmake
+C:/Program Files/CMake/share/cmake-3.22/Modules/CheckSymbolExists.cmake
+C:/Users/Mohamed Mahmoud/Downloads/New folder/pi/CMakeModules/FindOpenCL.cmake
+C:/Users/Mohamed Mahmoud/Downloads/New folder/pi/src/opencl/CMakeLists.txt

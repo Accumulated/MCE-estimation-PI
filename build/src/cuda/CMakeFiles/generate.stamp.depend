@@ -1,0 +1,12 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-3.22/Modules/FindCUDA.cmake
+C:/Program Files/CMake/share/cmake-3.22/Modules/FindCUDA/run_nvcc.cmake
+C:/Program Files/CMake/share/cmake-3.22/Modules/FindCUDA/select_compute_arch.cmake
+C:/Program Files/CMake/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-3.22/Modules/FindPackageMessage.cmake
+C:/Users/Mohamed Mahmoud/Downloads/New folder/pi/CMakeModules/CUDACheckCompute.cmake
+C:/Users/Mohamed Mahmoud/Downloads/New folder/pi/CMakeModules/FindNVVM.cmake
+C:/Users/Mohamed Mahmoud/Downloads/New folder/pi/CMakeModules/cuda_compute_capability.cpp
+C:/Users/Mohamed Mahmoud/Downloads/New folder/pi/build/src/cuda/CMakeFiles/pi_cuda.dir/pi_cuda_generated_pi.cu.obj.cmake.pre-gen
+C:/Users/Mohamed Mahmoud/Downloads/New folder/pi/build/src/cuda/CMakeFiles/pi_cuda.dir/pi_cuda_generated_pi.cu.obj.depend
+C:/Users/Mohamed Mahmoud/Downloads/New folder/pi/src/cuda/CMakeLists.txt

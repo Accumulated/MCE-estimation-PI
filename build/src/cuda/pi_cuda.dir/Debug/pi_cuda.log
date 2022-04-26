@@ -1,0 +1,57 @@
+﻿  Building NVCC (Device) object src/cuda/CMakeFiles/pi_cuda.dir/Debug/pi_cuda_generated_pi.cu.obj
+  pi.cu
+  device_functions.h is an internal header file and must not be used directly.  This file will be removed in a future CUDA release.  Please use cuda_runtime_api.h or cuda_runtime.h instead.
+C:\Users\Mohamed Mahmoud\Downloads\New folder\pi\src\cuda\pi.cu(188): warning #2464-D: conversion from a string literal to "char *" is deprecated
+  
+C:\Users\Mohamed Mahmoud\Downloads\New folder\pi\src\cuda\pi.cu(188): warning #2464-D: conversion from a string literal to "char *" is deprecated
+  
+  pi.cu
+C:\Users\Mohamed Mahmoud\Downloads\New folder\pi\src\common\common.h(15): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  device_functions.h is an internal header file and must not be used directly.  This file will be removed in a future CUDA release.  Please use cuda_runtime_api.h or cuda_runtime.h instead.
+C:\Users\Mohamed Mahmoud\Downloads\New folder\pi\src\cuda\pi.cu(195): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Building Custom Rule C:/Users/Mohamed Mahmoud/Downloads/New folder/pi/src/cuda/CMakeLists.txt
+  CMake is re-running because C:/Users/Mohamed Mahmoud/Downloads/New folder/pi/build/src/cuda/CMakeFiles/generate.stamp is out-of-date.
+    the file 'C:/Users/Mohamed Mahmoud/Downloads/New folder/pi/build/src/cuda/CMakeFiles/pi_cuda.dir/pi_cuda_generated_pi.cu.obj.depend'
+    is newer than 'C:/Users/Mohamed Mahmoud/Downloads/New folder/pi/build/src/cuda/CMakeFiles/generate.stamp.depend'
+    result='-1'
+  CMake Deprecation Warning at CMakeLists.txt:1 (CMAKE_MINIMUM_REQUIRED):
+    Compatibility with CMake < 2.8.12 will be removed from a future version of
+    CMake.
+  
+    Update the VERSION argument <min> value or use a ...<max> suffix to tell
+    CMake that the project does not need compatibility with older versions.
+  
+  
+  -- Selecting Windows SDK version 10.0.19041.0 to target Windows 10.0.19044.
+  CMake Deprecation Warning at src/cuda/CMakeLists.txt:1 (CMAKE_MINIMUM_REQUIRED):
+    Compatibility with CMake < 2.8.12 will be removed from a future version of
+    CMake.
+  
+    Update the VERSION argument <min> value or use a ...<max> suffix to tell
+    CMake that the project does not need compatibility with older versions.
+  
+  
+  -- Using LIBNVVM_HOME: C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.6/nvvm
+  -- C:/Users/Mohamed Mahmoud/Downloads/New folder/pi/CMakeModules/cuda_compute_capability.cpp
+  -- CUDA Compute Detection Output: 75
+  -- CUDA Compute Detection Return: 0
+  -- CUDA Compute Detection Worked
+  -- Number of Computes Detected = 1
+  CMake Deprecation Warning at src/opencl/CMakeLists.txt:1 (CMAKE_MINIMUM_REQUIRED):
+    Compatibility with CMake < 2.8.12 will be removed from a future version of
+    CMake.
+  
+    Update the VERSION argument <min> value or use a ...<max> suffix to tell
+    CMake that the project does not need compatibility with older versions.
+  
+  
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Mohamed Mahmoud/Downloads/New folder/pi/build
+  pi.cpp
+C:\Program Files\ArrayFire\v3\include\af/exception.h(22,1): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'af::exception'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\include\vcruntime_exception.h(48): message : see declaration of 'std::exception'
+C:\Program Files\ArrayFire\v3\include\af/exception.h(21): message : see declaration of 'af::exception'
+C:\Users\Mohamed Mahmoud\Downloads\New folder\pi\src\common\common.h(15,20): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+     Creating library C:/Users/Mohamed Mahmoud/Downloads/New folder/pi/build/bin/Debug/pi_cuda.lib and object C:/Users/Mohamed Mahmoud/Downloads/New folder/pi/build/bin/Debug/pi_cuda.exp
+  pi_cuda.vcxproj -> C:\Users\Mohamed Mahmoud\Downloads\New folder\pi\build\bin\Debug\pi_cuda.exe
