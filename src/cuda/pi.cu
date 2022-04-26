@@ -117,11 +117,10 @@ __global__ void Reduction(curandState_t* states, float *ptr)
   __syncthreads();
   for (stride = blockDim.x; stride > 0; stride = stride / 2.0f)
   {
-    __syncthreads();
     if (tx < stride)
         partialSum[tx] += partialSum[tx + stride];
+	__syncthreads();
   }
-  __syncthreads();
 
 
   // The final sum will always be in the first location.
