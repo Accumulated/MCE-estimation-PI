@@ -18,7 +18,6 @@
 
 #define WARP_SIZE 32
 
-
 /*******************************************************************************
  * This code implements Monte Carlo Simulation for estimating
  * Pi value. The estimation is performed using 3 kernels:
@@ -92,19 +91,28 @@ __global__ void Reduction(curandState_t* states, float *ptr)
   {
     x = curand_uniform(&states[sequence]);
     y = curand_uniform(&states[sequence]);
-
+    // Count Number of points
     if (x * x + y * y < 1)
-	// Count the points
-	tmp += 1;
+      tmp += 1;
   }
   // Append the value in memory
-  partialSum[tx] += tmp;
+  partialSum[tx] = tmp;
 
+  tmp = 0;
+  for(int i = 0; i < ItersPerThread; i++)
+  {
+    x = curand_uniform(&states[sequence]);
+    y = curand_uniform(&states[sequence]);
+    if (x * x + y * y <= 1)
+      tmp += 1;
+  }
+  partialSum[tx] += tmp;
+  
   __syncthreads();
   for (unsigned int stride = blockDim.x / 2; stride > WARP_SIZE; stride = stride / 2.0f)
   {
-      if (tx < stride)
-		partialSum[tx] += partialSum[tx + stride];
+    if (tx < stride)
+      partialSum[tx] += partialSum[tx + stride];
       __syncthreads();
   }
 
