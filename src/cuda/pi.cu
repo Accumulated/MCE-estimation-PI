@@ -112,10 +112,9 @@ __global__ void Reduction(curandState_t* states, float *ptr)
 
   // Perfrom reduction sum algorithm to sum all elements
   // in the partialSum shared memory array.
-  unsigned int stride = 0;
 
   __syncthreads();
-  for (stride = blockDim.x; stride > 0; stride = stride / 2.0f)
+  for (unsigned int stride = blockDim.x; stride > 0; stride = stride / 2.0f)
   {
     if (tx < stride)
         partialSum[tx] += partialSum[tx + stride];
@@ -194,6 +193,7 @@ double pi()
   init <<< dim_Grid, dim_Block >>> (time(NULL), states);
   Reduction <<< dim_Grid, dim_Block >>> (states, Summation.elements);
   Sum <<< dim_Grid2, dim_Block2 >>> (Summation.elements,  Summation.NumberOfElements);
+  cudaDeviceSynchronize();
 
   float x = 0;
   cudaMemcpy(&x, &Summation.elements[0], sizeof(float), cudaMemcpyDeviceToHost);
